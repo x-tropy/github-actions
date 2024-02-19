@@ -19,5 +19,5 @@ jobs:
       - name: list the files in the repository
         run: ls -al
       - name: 🚀 Run a script
-        run: bash /scripts/a.sh
+        run: bash scripts/a.sh
 
