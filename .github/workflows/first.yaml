@@ -16,13 +16,25 @@ jobs:
           echo $var2.
       - name: ⏬ Checkout the repository to the runner
         uses: actions/checkout@v4
+      - name: 🆕 New script
+        run: |
+          echo 'echo "This is a new script"' > scripts-hot/new.sh
+      - name: ⏫ Upload the new script
+        uses: actions/upload-artifact@v4
+        with:
+          name: new-script
+          path: scripts-hot/new.sh
       - name: list the files in the repository
         run: ls -al
-  second-job-definition:
-    name: '🏠 Now the real shit starts'
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚀 Run a script
+      - name: 🚀 Run new script
         run: |
-          bash scripts/a.sh
-          bash scripts/b.sh
+          bash scripts-hot/new.sh
+  # second-job-definition:
+  #   name: '🏠 Now the real shit starts'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 🚀 Run a script
+  #       run: |
+  #         bash scripts/a.sh
+  #         bash scripts/b.sh
+      
