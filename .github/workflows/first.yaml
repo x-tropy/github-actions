@@ -33,15 +33,10 @@ jobs:
     name: '🏠 Now the real shit starts'
     runs-on: ubuntu-latest
     steps:
-      - name: ⏬ Checkout the repository to the runner
-        uses: actions/checkout@v4
-      - name: list all files available
-        run: ls -al
+      - name: ⏬ Download new.sh
+        uses: actions/download-artifact@v4
+        with:
+          name: new-script
       - name: 🚀 Run scripts
         run: |
-          bash scripts/a.sh
-          bash scripts/b.sh
           bash new.sh
-          bash a.sh
-          bash b.sh
-      
