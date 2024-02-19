@@ -18,8 +18,11 @@ jobs:
         uses: actions/checkout@v4
       - name: list the files in the repository
         run: ls -al
+  second-job-definition:
+    name: '🏠 Now the real shit starts'
+    runs-on: ubuntu-latest
+    steps:
       - name: 🚀 Run a script
         run: |
           bash scripts/a.sh
           bash scripts/b.sh
-
