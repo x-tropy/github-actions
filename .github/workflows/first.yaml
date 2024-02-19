@@ -3,7 +3,7 @@ name: first-workflow
 on: push
 
 jobs: 
-  build:
+  a-job-rocks:
     runs-on: ubuntu-latest
     steps:
       - name: log the variables
