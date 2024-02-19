@@ -7,11 +7,15 @@ jobs:
     name: '🔥 A job that rocks'
     runs-on: ubuntu-latest
     steps:
-      - name: log the variables
+      - name: 📝 log the variables
         env:
           var1: This is
           var2: a test
         run: |
           echo $var1
           echo $var2.
+      - name: ⏬ Checkout the repository to the runner
+        uses: actions/checkout@v2
+      - name: ✅ run a script
+        run: ./a.sh
 
