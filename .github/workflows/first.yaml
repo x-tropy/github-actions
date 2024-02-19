@@ -6,10 +6,6 @@ jobs:
   a-job-rocks:
     name: '🔥 A job that rocks'
     runs-on: ubuntu-latest
-    defaults:
-      # 这个 working-directory 是用在 run 指令中的，所以定义时也体现在 run 指令中
-      run:
-        working-directory: ./scripts
     steps:
       - name: 📝 log the variables
         env:
@@ -21,5 +17,5 @@ jobs:
       - name: ⏬ Checkout the repository to the runner
         uses: actions/checkout@v4
       - name: ✅ run a script
-        run: bash a.sh
+        run: bash ../../scripts/a.sh
 
