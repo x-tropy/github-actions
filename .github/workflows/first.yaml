@@ -29,12 +29,15 @@ jobs:
       - name: 🚀 Run new script
         run: |
           bash new.sh
-  # second-job-definition:
-  #   name: '🏠 Now the real shit starts'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 🚀 Run a script
-  #       run: |
-  #         bash scripts/a.sh
-  #         bash scripts/b.sh
+  second-job-definition:
+    name: '🏠 Now the real shit starts'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚀 Run scripts
+        run: |
+          bash scripts/a.sh
+          bash scripts/b.sh
+          bash new.sh
+          bash a.sh
+          bash b.sh
       
