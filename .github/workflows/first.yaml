@@ -6,9 +6,6 @@ jobs:
   first-job-definition:
     name: '🔥 A job that rocks'
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: scripts
     steps:
       - name: 📝 log the variables
         env:
@@ -23,6 +20,6 @@ jobs:
         run: ls -al
       - name: 🚀 Run a script
         run: |
-          bash a.sh
-          bash b.sh
+          bash scripts/a.sh
+          bash scripts/b.sh
 
