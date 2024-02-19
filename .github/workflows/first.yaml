@@ -40,3 +40,16 @@ jobs:
       - name: 🚀 Run scripts
         run: |
           bash new.sh
+  third-job-definition:
+    name: '📁 Figure out working folder'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: run scripts inside scripts folder
+        run: |
+          bash a.sh
+          bash b.sh
