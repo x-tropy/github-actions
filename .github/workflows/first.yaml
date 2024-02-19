@@ -53,3 +53,10 @@ jobs:
         run: |
           bash a.sh
           bash b.sh
+  fourth_job:
+    name: '🌟 获取内置变量'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print workflow name
+        run: |
+          echo ${{github.workflow}}
