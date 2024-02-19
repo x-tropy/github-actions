@@ -16,6 +16,6 @@ jobs:
           echo $var2.
       - name: ⏬ Checkout the repository to the runner
         uses: actions/checkout@v4
-      - name: ✅ run a script
-        run: bash ./scripts/a.sh
+      - name: list the files in the repository
+        run: ls -l
 
