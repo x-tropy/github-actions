@@ -1,1 +1,1 @@
-echo 'hello from a.sh'
+echo 'hello from b.sh'
