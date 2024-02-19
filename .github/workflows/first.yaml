@@ -3,9 +3,12 @@ name: 🚀 first-workflow
 on: push
 
 jobs: 
-  a-job-rocks:
+  first-job-definition:
     name: '🔥 A job that rocks'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
       - name: 📝 log the variables
         env:
@@ -19,5 +22,7 @@ jobs:
       - name: list the files in the repository
         run: ls -al
       - name: 🚀 Run a script
-        run: bash scripts/a.sh
+        run: |
+          bash a.sh
+          bash b.sh
 
