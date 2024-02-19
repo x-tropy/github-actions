@@ -1,9 +1,10 @@
-name: first-workflow
+name: 🚀 first-workflow
 
 on: push
 
 jobs: 
   a-job-rocks:
+    name: '🔥 A job that rocks'
     runs-on: ubuntu-latest
     steps:
       - name: log the variables
