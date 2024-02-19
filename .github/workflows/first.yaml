@@ -1,0 +1,21 @@
+name: first-workflow
+
+on: push
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./scripts
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log the variables
+        env:
+          var1: This is
+          var2: a test
+        run: |
+          echo $var1
+          echo $var2.
+
